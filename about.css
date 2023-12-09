@@ -84,9 +84,126 @@ h1 {
 .team_member-socials:hover a {
   color: var(--color-success);
 }
-/* media screen on tablet */
-@media screen and (max-width: 1024px) {
-    .about_achievements{
-        margin-top
+/* =============== MEDIA QUERIES (SMARTPHONE) ============= */
+@media screen and (max-width: 896px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  nav {
+    width: 100%;
+  }
+  .window-scrool {
+    height: 80px;
+  }
+  nav button {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+  nav button#close-menu-button {
+    display: none;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 4rem;
+    right: 1%;
+    height: fit-content;
+    width: 18rem;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  .nav__menu li {
+    width: 80%;
+    height: 5.8rem;
+    animation: animateNavItems 400ms linear forwards;
+    transform-origin: top right;
+  }
+  .nav__menu li:nth-child(2) {
+    animation-delay: 200ms;
+  }
+  .nav__menu li:nth-child(3) {
+    animation-delay: 400ms;
+  }
+  .nav__menu li:nth-child(4) {
+    animation-delay: 600ms;
+  }
+  .nav__menu li:nth-child(5) {
+    animation-delay: 800ms;
+  }
+  @keyframes animateNavItems {
+    0% {
+      transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
     }
+    100% {
+      transform: rotateZ(0);
+      opacity: 1;
+    }
+  }
+  .nav__menu li a {
+    background: var(--color-danger);
+    box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    width: 80%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .nav__menu li {
+    width: 80%;
+    height: 120%;
+  }
+  .about_achievements {
+    margin-top: 2rem;
+    width: 173vw;
+  }
+  .about_achivements-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 0.5rem;
+    text-align: center;
+  }
+  .about_achievements-left {
+  }
+  .about_achievements-left img {
+    width: 450px;
+    height: 450px;
+    margin: auto;
+  }
+  .about_achievements-right {
+    margin-left: 3rem;
+  }
+  .team {
+    width: 178vw;
+  }
+  .team_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+    margin-left: 1rem;
+  }
+  .team_member {
+    padding: 1rem;
+  }
+  .team_member-info {
+    text-align: center;
+    font-size: 0.3rem;
+  }
+  .team_member-image img {
+    width: 280px;
+    height: 280px;
+  }
 }

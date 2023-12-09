@@ -1,0 +1,57 @@
+.courses {
+  margin-top: 3rem;
+}
+.titel {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3vw;
+
+  letter-spacing: 0.3rem;
+  color: #384449;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+h2 {
+  padding: 0.25em 0 0.325em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Animate Background Image */
+
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
+
+  /* Activate hardware acceleration for smoother animations */
+
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+h2:hover {
+  transform: translate3d(0, -10px, 22px);
+  color: #ff0266;
+}
+@media screen and (max-width: 896px) {
+  .courses {
+    width: 178vw;
+  }
+  .titel {
+    position: relative;
+  }
+  .courses__countainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+  }
+}

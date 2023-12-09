@@ -459,7 +459,7 @@ nav button#close-menu-button{
     height: 100%;;
   }
   .btn a{
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
   .header__right-img img{
     width: 50px;
@@ -480,11 +480,12 @@ nav button#close-menu-button{
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
-  .courses h2{
-    
-  }
   .courses__info{
     padding: 3.1rem;
+    text-align: center;
+  }
+  #crs{
+    font-size: 0.5rem;
   }
   .courses__info h4{
     font-size: 1.2rem;
